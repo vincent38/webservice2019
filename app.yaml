@@ -1,0 +1,36 @@
+﻿runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /sitemap.xml
+  script: main.app
+
+- url: /(.*\..*)
+  static_files: static/\1
+  upload: static/.*
+
+- url: /.*
+  script: main.app
+
+
+libraries:
+- name: webapp2
+  version: 2.5.2
+- name: PIL
+  version: 1.1.7
+- name: ssl
+  version: latest
+env_variables:
+  GAE_USE_SOCKETS_HTTPLIB : True
+
+skip_files:
+- \.git/
+- \.idea/
+- venv/
+- bootstrap[\-\d.]+/(?!dist).*
+- open-iconic/(?!font).*
+- .*.so$
+- .*.exe$
+- .*.pyc$
+- .*(ffmpeg|ffplay|ffprobe)$

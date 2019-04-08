@@ -1,0 +1,182 @@
+
+#ファイル構成
+plan
+	plan1
+	plan2
+	plan3
+static
+	head.png
+	head.svg
+	custom.js
+	custom.css
+template
+	__init__.py
+	appengine.py
+	filter.py
+	request.py
+	util.py
+app.yaml
+base.html
+category.txt
+data.js
+deploy.sh
+gae.py
+home.html
+sitemap.xml
+test.html
+
+#server
+class unit
+	def store(self,work):
+		self.detail={namejp:work.namejp,namech,textjp,textch}
+	def format(self)
+		return {name,image,idnamejp,namech,textjp,textch}
+def translate()
+def auth()
+	params.update(user,userformat=user.format(),target,category)
+def work
+	if "/translate"
+	if "/sitemap"
+		return sitemap.format()
+	if "/"
+		return home
+	if "/channel"
+		if action="new"
+			unit().store(work).put()
+			return unit.format or 400="not login"
+		if action="del"
+			return none
+		if action="set":
+			unit().store(work).put()
+			return unit.format or 400="not login"
+		else:
+			query.fetch
+			return unit.format
+	if "/message"
+		if action="new"
+			unit().store(work).put()
+			return unit.format or 400="not login"
+		if action="del"
+			return none
+		if action="set":
+			unit().store(work).put()
+			return unit.format or 400="not login"
+		else:
+			write_json
+	if "/user"
+		write_json({id:{}}) or 400
+	if "/sign"
+		if action="in"
+			write_json({id:{}}) or 400
+		if action="up"
+			write_json({id:{}}) or 400
+		if action="out"
+			return none
+#data.js
+data={
+	language:"jp",
+	channel:[],
+	message:[],
+	category:{{category}}
+	user:{{userformat}}
+	users:[]
+}
+一分に一回or書き込み時
+message最新10+更新
+十分に一回or遷移時
+channel全更新
+message全更新
+#custom.js
+Vue.component('category', {multiチャンネル
+	template: '#channel-template',
+	props: {
+		model: Object,
+		language : String,
+	},
+	data: function () {
+		return {open: false}
+	},
+	methods: {
+		toggle: function () {this.open = !this.open },
+	},
+})
+Vue.component('message', {oneメッセージ
+	template: '#channel-template',
+	props: {
+		model: Object,
+		language : String,
+	},
+	data: function () {
+		return {open: false}
+	},
+	methods: {
+		toggle: function () {this.open = !this.open },
+	},
+})
+
+Vue.component('translation', {
+	template: '#translation-template',
+	props: {
+		language: Object,
+		line: Boolean,
+		name: String,
+		limit: Number,
+	},
+	data: function () {
+		return {tx:"",jp:"",ch:"",txtmp:"",auto:"true"}
+	},
+	computed: {
+		namejp:function(){return this.name+'jp'},
+		namech:function(){return this.name+'ch'}
+	},
+	created: function(){
+		setInterval(this.translate, 1000);
+	},
+	methods: {
+		translate:function(){
+			if((this.tx!=this.txtmp)&&this.auto){
+				this.txtmp=this.tx
+				httpsend.call(this,"/translate",{q:this.tx},function (text) {
+					text= JSON.parse(text)
+					this.limit=this.limit
+					this.jp=text.jp
+					this.ch=text.ch
+				})
+			}
+		},
+	},
+})
+menu=new vue()
+	data:data
+	methods
+		signin
+			if httpsend('/sign?action=in')
+				data.user=r
+			else:
+				data.error=400
+		signup
+			if httpsend('/sign?action=in')
+				data.user=r
+			else:
+				data.error=400
+		signout
+category=new vue()
+	data:data
+	created
+		fetch()
+	methods
+		fetch()
+			data.category=r
+		new()
+			httpsend()
+message=new vue()
+	data:data
+	created
+		fetch()
+	methods
+		fetch()
+			data.category=r
+		new()
+			httpsend()
+#html
+ジャンルの右のボタンを押すとチャンネル作成モーダルがでる

@@ -1,0 +1,98 @@
+#ファイル構成
+template
+	__init__.py
+	appengine.py
+	filter.py
+	request.py
+static
+	head.png
+	head.svg
+	custom.js
+	custom.css #switchなど
+app.yaml
+gae.py
+base.html
+home.html
+sitemap.xml
+
+#base.html
+<script src="/custom.js">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+	<div class="container">
+		<a class="navbar-brand mr-auto" href="/">
+			<img src="/head.svg" style="width:auto;height:50px;">
+		</a>
+		<form class="form-inline my-2 my-md-0">
+			<input class="form-control mr-2" name="q" placeholder="Search">
+			{%if user%}
+			<div class="dropdown">
+				<a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-user"></i>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#"><i class="fas fa-question"></i> help</a>
+					<a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt"></i> log in/sign in</a>
+				</div>
+			</div>
+			{%else%}
+			<a class="btn btn-outline-primary mr-2" href=MODAL>LOG IN</a>
+			<a class="btn btn-primary mr-2" href=MODAL>SIGN IN</a>
+			{%endif%}
+			<div class="switch" onchange="vuw.languageの変更">
+			</div>
+		</form>
+	</div>
+</nav>
+{%block main%}
+Allrights reserved misumi3104
+
+#home.html
+{%extends "base.html"%}
+{%block main%}
+
+<!-- item template -->
+<script type="text/x-template" id="channel-template">
+	<li>
+		<div v-show="!istop" @click="toggle">
+			<span v-text="language=='jp'?model.namejp:model.namech"></span>
+			<span v-if="isFolder" v-text="open ? '[-]' : '[+]'"></span>
+		</div>
+		<ul v-if="isFolder">
+			<item v-for="(model, index) in open?model.children:model.children.slice(0,1)" :model="model" :language="language"></item>
+		</ul>
+	</li>
+</script>
+
+<p>(You can double click on an item to turn it into a folder.)</p>
+
+<!-- the demo root element -->
+<ul id="demo" style="padding-left:0;list-style: none;">
+	<li @click="languageswitch" v-text="language=='ch'?'chinese':'japanese'"></li>
+	<item :model="{children:treeData}" :language="language" :istop="true"></item>
+</ul>
+<div id="switch">
+</div>
+</script>
+{
+	"channel":tree
+	"message":tree
+	"language":"jp"
+}
+vuemessage
+vuechannel
+{%endblock%}
+
+#app.yaml
+class work
+	def work
+		if sitemap
+		if "/"
+		if "/channel"
+			if action="add"
+				redirect(ch=??)
+		if "/message"
+
+		if "/sign"
+			if action="in"
+			if action="up"
+			if action="out"

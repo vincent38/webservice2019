@@ -1,0 +1,1 @@
+git clone https://source.developers.google.com/p/chinajapanbbs/r/chinajapanbbs
