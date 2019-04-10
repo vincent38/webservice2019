@@ -1,31 +1,21 @@
 # -encoding:utf-8
-import template.request as request
 from template.appengine import *
-import copy, hashlib
-
-register_template()
-request.httpfunc = httpfunc
-# preset
-maxfilesize = 512 * 1024
+from datetime import datetime
 
 @statefunction
 def statemain(s):
-	def hash(hash):
-		return hashlib.sha224("233ch.net" + str(hash)).hexdigest()[:6]
-	def sendvalidation(email):
-		code = hash(email)
-		sendmail(to=email, subject="【233ch.net】your validation code is {0}".format(code), body="validation code:{0}\n\nThanks for using the site".format(code))
 	account=unit.get_by_short(s.account)
-	category = """anime アニメ 动漫;study 勉強 学习;comic 漫画 漫画;game ゲーム 游戏;university 大学 大学;music 音楽 音乐;computer パソコン 电脑;news ニュース 新闻;chat 雑談 聊天;work 仕事 工作"""
-	category = {name: {"name": name, "namejp": namejp, "namech": namech} for name, namejp, namech in (i.split() for i in category.split(";"))}
-	if s.action == "mal":
-		sendvalidation(s.email)
-	if s.action == "cok":
-		m = unit.query(unit.area == "account", unit.ukey == s.email, unit.usec == s.password).get()
-		if not m:
-			return 400
-		else:
-			account=m
+	if s.action == "aday":
+		aday = unit.query(unit.area == "attendance").order(-unit.born).get()
+		aday = aday and aday.format()
+	if s.action == "month":
+		cutmonth = int(s.cutmonth or 0)
+		cutday = int(s.cutmonth or 0)
+		now=datetime.now()
+		now=datetime.datetime(now.year,cutmonth,cutday)
+
+		span = unit.query(unit.area == "attendance",unit.born).order(-unit.born).get()
+		span = span and [i.format() for i in span]
 	if s.action == "new":
 		if hash(s.email) != s.code:
 			return 400
@@ -42,9 +32,6 @@ def statemain(s):
 		else:
 			account.storequery(s).put()
 	return {
-		"account":account and account.format(),
-		"language":"ch",
-		"category":category,
 	}
 @statefunction
 def statechannel(s):
