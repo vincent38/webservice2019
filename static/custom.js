@@ -29,11 +29,11 @@ function httpupdate(state,path,data,func){
 	})
 }
 Vue.component('categoryinput', {
-	template: '#categoryinput-template',
+	template: '#categoryinput-templateold',
 	props: ["language","category","model"],
 })
 Vue.component('imageinput', {
-	template: '#imageinput-template',
+	template: '#imageinput-templateold',
 	props: ["language","model"],
 	data: function () {
 		return {uri:""}
@@ -56,7 +56,7 @@ Vue.component('imageinput', {
 	},
 })
 Vue.component('translation', {
-	template: '#translation-template',
+	template: '#translation-templateold',
 	props: ["language","model","name"],
 	data: function () {
 		return {tx:"",txtmp:"",auto:"true",limit:200}
@@ -84,7 +84,7 @@ Vue.component('translation', {
 	},
 })
 Vue.component('ranking', {
-	template: '#ranking-template',
+	template: '#ranking-templateold',
 	props: ["language","category","state"],
 	created: function(){
 	    update(this,this.state)
@@ -110,7 +110,7 @@ Vue.component('ranking', {
 })
 
 Vue.component('channel', {
-	template: '#channel-template',
+	template: '#channel-templateold',
 	props: ["language","category","state"],
 	data: function () {
 		return {
@@ -142,7 +142,7 @@ Vue.component('channel', {
 	}
 })
 Vue.component('navbar', {
-	template: '#navbar-template',
+	template: '#navbar-templateold',
 	props: ["language","account","category","status","state"],
 	data: function () {
 		return {

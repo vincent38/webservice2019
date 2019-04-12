@@ -17,8 +17,6 @@ handlers:
 libraries:
 - name: webapp2
   version: 2.5.2
-- name: PIL
-  version: 1.1.7
 - name: ssl
   version: latest
 env_variables:
@@ -28,9 +26,6 @@ skip_files:
 - \.git/
 - \.idea/
 - venv/
-- bootstrap[\-\d.]+/(?!dist).*
-- open-iconic/(?!font).*
 - .*.so$
 - .*.exe$
 - .*.pyc$
-- .*(ffmpeg|ffplay|ffprobe)$
