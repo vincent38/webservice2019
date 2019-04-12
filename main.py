@@ -1,6 +1,7 @@
 # -encoding:utf-8
 from template.appengine import *
 from datetime import datetime
+import webapp2
 
 @statefunction
 def statemain(s):
@@ -179,28 +180,14 @@ class unit(unit):
 class work(workhandler):
 
 	def work(s):
-		if s.root("/translate"):
-			s.write_json(statetranslation(**s.params))
-		if s.root("/sitemap.xml"):
-			s.write_temp("sitemap.xml",statesitemap(),contenttype="application/xml")
 		if s.root("/"):
-			s.write_temp("home.html",{
-				"statemain": statemain(**s.params),
-				"staterankingnew": stateranking(order="new"),
-				"staterankingpop": stateranking(order="pop")
-			})
-		if s.root(lambda x:x.find("/channel/")>=0):
-			s.write_temp("page.html",{
-				"statemain": statemain(**s.params),
-				"statechannel": statechannel(channel=s.path.split("/")[-1],**s.params),
-				"staterankingnew": stateranking(order="new"),
-				"staterankingpop": stateranking(order="pop")
-			})
-		if s.root("/main"):
-			r=statemain(**s.params)
-			s.setcookie("account",r.get("account",None) and r["account"]["key"])
-			s.write_json(r)
-		if s.root("/channel"):
-			s.write_json(statechannel(**s.params))
+			s.write_temp("home.html",{})
+			return {"code": 200, "body":{}}
+		if s.path=="/slack":
+			return json.dumps({"code": 200,"error": "challenge_failed","body": {}})
 
-app = work.app()
+def testfunc(request, *args, **kwargs):
+	return webapp2.Response('You requested product<br>{0}<br>{1}'.format(json.dumps(args),json.dumps(kwargs)))
+
+app = webapp2.WSGIApplication([('/blob/([^/]+)?', BlobHandler),(r"/products/(\d+)",testfunc), ('/.*', None)])
+# http://localhost:8080/products/1, Your requested Product %1,

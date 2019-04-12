@@ -131,15 +131,22 @@ class workhandler(blobstore_handlers.BlobstoreUploadHandler, RequestHandler):
 			address = address.encode("utf-8")
 		RequestHandler.redirect(self, address)
 
-	def work(s, a):
+	def response(s, a):
+		if False:
+			context = ndb.get_context()
+			context.clear_cache()
+			context.set_cache_policy(lambda key: False)
+			context.set_memcache_policy(lambda key: False)
+		if any(i.size == 0 for i in s.get_uploads()):
+			blobstore.delete(i.key() for i in s.get_uploads())
 		# 処理の階層化を防ぐ
 		pass
 
 	def post(s):
-		s.work()
+		s.response()
 
 	def get(s):
-		s.work()
+		s.response()
 
 	def root(s, path):
 		check = False
@@ -148,13 +155,6 @@ class workhandler(blobstore_handlers.BlobstoreUploadHandler, RequestHandler):
 		if isinstance(path, types.FunctionType):
 			check = path(s.request.path)
 		if check:
-			if False:
-				context = ndb.get_context()
-				context.clear_cache()
-				context.set_cache_policy(lambda key: False)
-				context.set_memcache_policy(lambda key: False)
-			if any(i.size == 0 for i in s.get_uploads()):
-				blobstore.delete(i.key() for i in s.get_uploads())
 			# 引数
 			s.params = {"host": s.request.host_url, "path": s.request.path, "query": s.request.query_string}
 			s.params.update(s.request.cookies)
