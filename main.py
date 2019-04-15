@@ -1,7 +1,7 @@
 # -encoding:utf-8
 from template.appengine import *
 from template.unit import *
-OAUTH_TOKEN="xoxb-342204927924-595037105715-DZFn50eYDoeUuo4X8uHwK5Iy"
+OAUTH_TOKEN="xoxp-342204927924-342571726693-607813590900-d585b09efdecbf3646852194ced0a802"
 def testfunc(request, *args, **kwargs):
 	r=http.get("http://info.cern.ch/hypertext/WWW/TheProject.html")
 	return textres('You requested product<br>{0}<br>{1}'.format(json.dumps(args),json.dumps(kwargs)))
