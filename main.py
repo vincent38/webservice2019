@@ -1,6 +1,7 @@
 # -encoding:utf-8
 from template.appengine import *
-OAUTH_TOKEN="xoxp-342204927924-342571726693-597198151425-110aed279f204310b53881202363066b"
+from template.unit import *
+OAUTH_TOKEN="xoxb-342204927924-595037105715-DZFn50eYDoeUuo4X8uHwK5Iy"
 def testfunc(request, *args, **kwargs):
 	r=http.get("http://info.cern.ch/hypertext/WWW/TheProject.html")
 	return textres('You requested product<br>{0}<br>{1}'.format(json.dumps(args),json.dumps(kwargs)))
@@ -13,12 +14,28 @@ def helloslack(request,*args,**kwargs):
 		c=a["event"]
 		d=c["type"]
 		if d=="message":
-			http.post("https://slack.com/api/chat.postMessage",{
-				'token': OAUTH_TOKEN,
-				'channel': c['channel'],
-				'text': c["text"],
-				'username': c["text"]
-			})
+			if "user" in c:
+				unit(area="message",smalljson=c).put()
+				http.post("https://slack.com/api/chat.postMessage", {
+					'token': OAUTH_TOKEN,
+					'channel': c['channel'],
+					'text': c["text"],
+					'username': 'shrike',
+					'icon_url': urlformat(request,"{host}/icon.png"),
+				})
+			else:
+				pass
+def hello(request):
+	n=unit.query(unit.area=="message").order(-unit.born).fetch()
+	return jsonres([i.smalljson for i in n])
+def push(request):
+	c=unit.query(unit.area=="message").order(-unit.born).get().smalljson
+	http.post("https://slack.com/api/chat.postMessage", {
+		'token': OAUTH_TOKEN,
+		'channel': c['channel'],
+		'text': c["text"],
+		'username': c["text"]
+	})
 
-app = wsgiapp([(r"/products/(\d+)",testfunc), ('/slack', helloslack)])
+app = wsgiapp([(r"/products/(\d+)",testfunc), ('/slack', helloslack), ('/push', push), ('/', hello)])
 # http://localhost:8080/products/1, Your requested Product %1,

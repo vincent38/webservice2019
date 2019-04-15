@@ -1,11 +1,5 @@
 # coding=utf-8
-import os, json, re, urllib, datetime, time, types
-import webapp2
-from google.appengine.api import urlfetch
-from google.appengine.ext.webapp import template, blobstore_handlers, RequestHandler
-from google.appengine.api import app_identity, mail, memcache
-from google.appengine.ext import blobstore, ndb, vendor
-import util
+from google.appengine.ext import blobstore, ndb
 
 
 class unit(ndb.Model):
@@ -41,18 +35,7 @@ class unit(ndb.Model):
 	largefile = ndb.BlobKeyProperty()
 
 	def format(s):
-		return {}
-
-	@classmethod
-	def getgramfilter(cls, query):
-		return [cls.gram == i for i in cls.getgram(query)]
-
-	@classmethod
-	def getgram(cls, x):
-		return [x[i:i + 2] for i in range(0, len(x) - 1)]
-
-	def getgramtext(self):
-		return (self.name or "") + (self.text or "") + "".join(self.tags)
+		return s.to_dict()
 
 	@classmethod
 	def get_by_short(cls, str, keys_only=False):
@@ -92,6 +75,3 @@ class unit(ndb.Model):
 		self = k.get()
 		blobstore.delete([self.smallfile, self.largefile])
 		ndb.delete_multi(c.query(ndb.OR(c.kusr == self.key, c.kart == self.key, c.kitm == self.key)).fetch(keys_only=True))
-
-	def _pre_put_hook(self):
-		self.gram = self.__class__.getgram(self.getgramtext())
