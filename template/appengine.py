@@ -1,13 +1,11 @@
-import webapp2,json,http,os
+import webapp2,json,os
 from google.appengine.ext.webapp import template, blobstore_handlers, RequestHandler
 from google.appengine.api import urlfetch, app_identity, mail, memcache
 
-if True:
-    def httpfunc(method,url,header,data):
-        method={"POST":urlfetch.POST,"GET":urlfetch.GET}[method]
-        r=urlfetch.fetch(url=url, payload=data, method=method, headers=header)
-        return (r.status_code, r.content)
-    http.httpfunc = httpfunc
+def httpfunc(method,url,header,data):
+    method={"POST":urlfetch.POST,"GET":urlfetch.GET}[method]
+    r=urlfetch.fetch(url=url, payload=data, method=method, headers=header)
+    return (r.status_code, r.content)
 def wsgiapp(accesstable):
     return webapp2.WSGIApplication(accesstable)
 def textres(content,**kwargs):
@@ -20,8 +18,15 @@ def tempres(temp,params,**kwargs):
     return textres(template.render(tmp, params),**kwargs)
 def jsonres(content):
     return webapp2.Response(json.dumps(content))
-def getjson(request):
+def passres(url):
+    return webapp2.redirect(url)
+def requestjson(request):
     return json.loads(request.body)
+def requestargs(request):
+    r={}
+    r.update(request.GET)
+    r.update(request.POST)
+    return r
 def urlformat(request,formatstring,**kwargs):
     return formatstring.format(host=request.host_url,path=request.path,query=request.query_string,**kwargs)
 
