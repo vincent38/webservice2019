@@ -33,7 +33,9 @@ function nowTime(){
 }
 nowTime();
 ```
-巷にあふれる動くサイトはjavascriptが使われている。
+巷にあふれる動くサイトはjavascriptが使われている。この講座でもJavascriptのライブラリであるＪｑｕｅｒｙなどを今後使用する。
+JavaScriptの書き方などはここで解説する余裕がない。各自調べてください。リンクは張っておきます。
 ## 自分で調べる知識
 * [HTML入門](https://reference.hyper-text.org/html5/attribute/id/) ここに<script>タグやid属性についての解説もある
-* [javascriptとDOM](https://www.javadrive.jp/javascript/dom/) 網羅的なサイトが見つかりませんでしたjavascriptで検索して他のサイトでも調べてください
+* [javascript](https://www.javadrive.jp/javascript/) 
+* [javascriptとDOM](https://www.javadrive.jp/javascript/dom/) 
