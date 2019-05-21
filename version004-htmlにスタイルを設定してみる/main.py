@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#目的　HTMLとCSSを書く
 import webapp2
 #追加
 from google.appengine.ext.webapp import template
