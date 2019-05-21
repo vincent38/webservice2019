@@ -10,8 +10,7 @@ def hello(request):
 def post(request):
 	args=requestargs(request)
 	if args["type"]=="message.post":
-		if datetime.now()<datetime(2019,4,30,15,0,0,0):
-			unit(name=args["name"],text=args["text"]).put()
+		unit(name=args["name"],text=args["text"]).put()
 	return passres("/")
 
 app = wsgiapp([('/', hello),('/post', post)])
