@@ -1,0 +1,1 @@
+C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\bundledpython
