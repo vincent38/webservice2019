@@ -1,84 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7b43a4c-dc44-4100-9523-d7b2684c41ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../version001-helloworld/.idea/version001-helloworld.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/version002-html.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/version004-HTML_with_CSS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/version005-HTML_with_JS.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/version006-bootstrap_ready.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/version007-bootstrap.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dev_appserver_redirect.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version001-helloworld/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version001-helloworld/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version001-helloworld/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version001-helloworld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version001-helloworld/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/version003-HTML_with_IMG.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/version003-HTML_with_IMG.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version003-HTML_with_IMG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version004-HTML_with_CSS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version005-HTML_with_JS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version006-bootstrap_ready/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version007-bootstrap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../version007-bootstrap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/heiseibbs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/libraries/Google_App_Engine_SDK.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/version003-HTML_with_IMG.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/webservice2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../version999/.idea/workspace.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="d7b43a4c-dc44-4100-9523-d7b2684c41ab" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1105404910">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="width" value="981" />
-    <option name="height" value="1041" />
+    <option name="x" value="-13" />
+    <option name="width" value="982" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -93,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../version003-HTML_with_IMG" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../version005-HTML_with_JS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -154,9 +101,9 @@
     <option name="totallyTimeSpent" value="115000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25788197" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25776604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -181,6 +128,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/version002_html$appengine.coverage" NAME="appengine Coverage Results" MODIFIED="1558968957080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

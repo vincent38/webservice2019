@@ -7,5 +7,5 @@ def hello(request):
 	# return webapp2.Response("hello")
 	return webapp2.Response(template.render("index.html", None))
 def form(request):
-	return webapp2.Response(template.render("subpage.html", {"name":request.get("emailaddress")}))
+	return webapp2.Response(json.dumps(dict(request.params)))
 app = webapp2.WSGIApplication([('/', hello),('/form',form)])

@@ -8,6 +8,6 @@ function getNowDate(){
 }
 function nowTime(){
   var node = document.getElementById("name");
-  node.textContent = getNowDate();
+  node.textContent = "あいうえお";
 }
 nowTime();
